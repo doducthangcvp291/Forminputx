@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Forminputx</string>
+    <string name="hoten">Họ và Tên</string>
+    <string name="mssv">MSSV</string>
+    <string name="ns">Ngày sinh</string>
+    <string name="diachi">Địa chỉ</string>
+    <string name="sdt">SDT</string>
+    <string name="email">Email</string>
 </resources>

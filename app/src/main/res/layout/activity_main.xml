@@ -20,25 +20,29 @@
         android:id="@+id/hoten"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
+        android:hint="@string/hoten"
+
         android:inputType="textPersonName"
 
         app:layout_constraintEnd_toEndOf="parent"
-
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/mssv"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="7dp"
         android:ems="10"
+        android:hint="@string/mssv"
+
         android:inputType="textPersonName"
-        android:text="MSSV"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hoten" />
 
@@ -46,12 +50,12 @@
         android:id="@+id/Ngaysinh"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
+        android:hint="@string/ns"
+
+
         android:inputType="textPersonName"
-
-
-        android:text="Ngay Sinh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mssv"
         app:layout_constraintTop_toTopOf="@id/mssv" />
@@ -60,7 +64,7 @@
         android:id="@+id/Gioitinh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="7dp"
         android:text="Gioi tinh"
         android:textSize="16sp"
@@ -95,13 +99,13 @@
         android:id="@+id/Diachi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Dia chi"
+        android:hint="@string/diachi"
 
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -110,13 +114,13 @@
         android:id="@+id/sdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="7dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="SDT"
+        android:hint="@string/sdt"
 
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Diachi" />
@@ -125,13 +129,14 @@
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="7dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
 
+        android:hint="@string/email"
+
         android:inputType="textPersonName"
-        android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sdt" />
@@ -140,19 +145,18 @@
         android:id="@+id/thethao"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="7dp"
         android:text="The thao"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sothich"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/sothich" />
 
 
     <CheckBox
         android:id="@+id/dulich"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="15dp"
 
         android:text="Du lich"
         app:layout_constraintBottom_toBottomOf="@+id/thethao"
@@ -163,7 +167,7 @@
         android:id="@+id/amnhac"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="10dp"
         android:text="Am nhac"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -173,7 +177,7 @@
         android:id="@+id/sothich"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="9dp"
         android:text="So thich"
         android:textSize="16sp"
@@ -184,14 +188,14 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:text="Submit"
+        android:layout_marginBottom="70dp"
+        android:onClick="OnClick"
 
+        android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amnhac"
-        android:onClick="OnClick"/>
+        app:layout_constraintTop_toBottomOf="@+id/amnhac" />
     
 
 </androidx.constraintlayout.widget.ConstraintLayout>
