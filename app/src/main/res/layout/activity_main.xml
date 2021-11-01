@@ -1,140 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".MainActivity">
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Ho va Ten"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
+<ScrollView    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="600dp"
 
-            <EditText
-                android:id="@+id/editTextTextPersonName2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="MSSV"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="79dp" />
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
 
-            <EditText
-                android:id="@+id/editTextTextPersonName3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Ngay Sinh"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="138dp" />
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
 
-            <RadioGroup
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="226dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="Nam" />
+    <EditText
+        android:id="@+id/hoten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Ho va Ten"
+        app:layout_constraintEnd_toEndOf="parent"
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="37dp" />
 
-                    android:text="Nu" />
-            </RadioGroup>
+    <EditText
+        android:id="@+id/mssv"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="MSSV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hoten" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Dia chi"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="342dp" />
+    <EditText
+        android:id="@+id/Ngaysinh"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+        android:inputType="textPersonName"
 
-            <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="SDT"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="399dp" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Email"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="458dp" />
+        android:text="Ngay Sinh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mssv"
+        app:layout_constraintTop_toTopOf="@id/mssv" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gioi tinh"
-                tools:layout_editor_absoluteX="19dp"
-                tools:layout_editor_absoluteY="204dp" />
+    <TextView
+        android:id="@+id/Gioitinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:text="Gioi tinh"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mssv" />
 
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="The thao"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="535dp" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/Gioitinh"
+        tools:layout_editor_absoluteX="16dp">
 
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Du lich"
-                tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="535dp" />
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Nam" />
 
-            <CheckBox
-                android:id="@+id/checkBox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Am nhac"
-                tools:layout_editor_absoluteX="206dp"
-                tools:layout_editor_absoluteY="535dp" />
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="So thich"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="503dp" />
+            android:text="Nu" />
+    </RadioGroup>
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                tools:layout_editor_absoluteX="158dp"
-                tools:layout_editor_absoluteY="592dp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/Diachi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Dia chi"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="SDT"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Diachi" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+
+        android:inputType="textPersonName"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sdt" />
+
+    <CheckBox
+        android:id="@+id/thethao"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:text="The thao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sothich"
+        />
+
+
+    <CheckBox
+        android:id="@+id/dulich"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+
+        android:text="Du lich"
+        app:layout_constraintBottom_toBottomOf="@+id/thethao"
+        app:layout_constraintEnd_toStartOf="@+id/amnhac"
+        app:layout_constraintLeft_toRightOf="@id/thethao" />
+
+    <CheckBox
+        android:id="@+id/amnhac"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:text="Am nhac"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/dulich" />
+
+    <TextView
+        android:id="@+id/sothich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="9dp"
+        android:text="So thich"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Submit"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amnhac" />
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
 
