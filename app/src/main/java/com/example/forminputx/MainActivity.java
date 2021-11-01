@@ -1,14 +1,13 @@
 package com.example.forminputx;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,20 +20,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         hoten = (EditText) findViewById(R.id.hoten);
         mssv = (EditText) findViewById(R.id.mssv);
         ngaysinh = (EditText) findViewById(R.id.Ngaysinh);
         sdt = (EditText) findViewById(R.id.sdt);
         email = (EditText) findViewById(R.id.email);
-
         submit = (Button) findViewById(R.id.submit);
-        submit.setOnClickListener(v -> {
-            if (TextUtils.isEmpty(hoten.getText()) || TextUtils.isEmpty(mssv.getText())
-                    || TextUtils.isEmpty(ngaysinh.getText()) || TextUtils.isEmpty(sdt.getText())
-                    || TextUtils.isEmpty(email.getText())) {
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
 
-                Toast.makeText(MainActivity.this,"Please enter all required information",Toast.LENGTH_LONG).show();
                 if (TextUtils.isEmpty(hoten.getText())) {
                     hoten.setError("Please enter your name");
                     hoten.setBackgroundResource(R.drawable.edterr);
@@ -54,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(email.getText())) {
                     email.setError("Please enter your email");
                     email.setBackgroundResource(R.drawable.edterr);
-                }
+
+            }
             }
         });
         /*
@@ -67,9 +63,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         */
-
-
-
 
     }
 }
